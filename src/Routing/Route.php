@@ -143,7 +143,7 @@ class Route extends EventEmitter
             //Wait request end to launch route
             $request->httpRequest->on('end', function() use ($request, $response, $next, &$dataResult) {
                 if ($dataResult !== null) {
-                    parse_str($dataResult, $data);
+                    $data = json_decode($dataResult, 1);
                     $request->setData($data);
                 }
 
