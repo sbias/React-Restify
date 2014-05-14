@@ -1,6 +1,6 @@
 {
-    "name"          : "capmousse/react-restify",
-    "description"   : "Create RESTful API with ReactPHP",
+    "name"          : "xlizard/react-restify",
+    "description"   : "Create RESTful API with ReactPHP (json-post)",
     "keywords"      : [ "react", "rest", "restify" ],
     "license"       : "MIT",
     "authors"       : [
