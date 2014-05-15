@@ -7,35 +7,11 @@ This fork accepts json instead of form-encoded post and put data
 In your `composer.json`
 
     "require"       : {
-        "capmousse/react-restify": "dev-master"
+        "xlizard/react-restify": "dev-master"
     },
 
-
-##Create server
-
-Here is an exemple of a simple HTTP server replying to all get call like `http://127.0.0.1:1337/hello/you`
-
-```php
-require 'vendor/autoload.php';
-
-$server = new CapMousse\ReactRestify\Server("MyAPP", "0.0.0.1");
-
-$server->get('/hello/{name}', function ($request, $response, $next) {
-    $response->write("Hello ".$request->name);
-    $next();
-});
-
-$runner = new CapMousse\ReactRestify\Runner($server);
-$runner->listen(1337);
-```
-
-More examples can be found on the example directory like the **Todo** example, the most complete
-
-## Design goals
-
-*React-Restify* was primary made to build RESTful api easily. It can be used like *Silex*, but without the framework part.
-
-Next part will be to support Sockets, Upgrade Requests... to create a real time API server.
+Please see the original repo for usage. 
+https://github.com/CapMousse/React-Restify
 
 ##Licence
 
