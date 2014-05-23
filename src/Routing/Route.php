@@ -144,6 +144,11 @@ class Route extends EventEmitter
             $request->httpRequest->on('end', function() use ($request, $response, $next, &$dataResult) {
                 if ($dataResult !== null) {
                     $data = json_decode($dataResult, 1);
+                    if ($data===null) {
+                        $response->setStatus('500');
+                        $response->end();
+                        return false;
+                    }
                     $request->setData($data);
                 }
 
